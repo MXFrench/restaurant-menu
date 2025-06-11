@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansita+Swashed:wght@300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Rubik", sans-serif;
+  --font-special: "Sansita Swashed", system-ui;
+
+  --color-base: #14161A;
+  --color-accent-1: #D7D0AB;
+  --color-accent-2: #716D5A;
+  --color-fg: #FFFDF4;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-fg);
+}
