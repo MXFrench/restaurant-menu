@@ -10,3 +10,7 @@ export function capitalize(inputStr) {
 export function filterByCategory(menu, category) {
   return menu.filter(item => item.category === category);
 }
+
+export function filterBySearch(menu, searchTerm) {
+  return menu.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.description.toLowerCase().includes(searchTerm.toLowerCase()));
+}
