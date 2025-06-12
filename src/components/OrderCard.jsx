@@ -9,7 +9,6 @@ export const OrderCard = ({ item }) => {
   const updateOrder = useUpdateOrder();
   const [itemCount, setItemCount] = useState(item.count);
 
-  // useEffect(() => updateOrder(prev => ({...prev, orderItems: updateCountOrder(prev.orderItems)})));
   useEffect(() => {
     if (!orderItems || orderItems?.length === 0) return;
     const updatedOrderItems = updateCountOrder(orderItems, item.id, itemCount);

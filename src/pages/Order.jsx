@@ -5,10 +5,13 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { capitalize, countOrders, sumPrice } from "../lib";
 import { OrderCard } from "../components/OrderCard";
 import CheckoutBtn from "../components/CheckoutBtn";
+import OrderTypeMenu from "../components/OrderTypeMenu";
+import { useState } from "react";
 
 const Order = () => {
   const navigate = useNavigate();
   const {orderType, orderItems} = useOrder();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="h-screen bg-size-[12rem] grid grid-rows-[1fr_auto]" style={{backgroundImage: `url(${crissxcross})`}}>
@@ -22,7 +25,12 @@ const Order = () => {
 
         <div className="flex gap-4 items-center *:leading-none">
           <h1 className="text-4xl font-semibold">Order Type: </h1>
-          <p className="text-2xl py-2 px-4 border-2 border-accent-2 text-accent-1 rounded-full">{capitalize(orderType)}</p>
+          <div className="relative">
+            <button className="text-2xl py-2 px-4 border-2 border-accent-2 text-accent-1 rounded-full cursor-pointer"
+              onClick={() => setIsOpen(prev => !prev)}
+            >{orderType ? capitalize(orderType) : <span className="opacity-25 hover:opacity-50 transition">Order Type</span>}</button>
+            {isOpen && <OrderTypeMenu setIsOpen={setIsOpen} />}
+          </div>
         </div>
 
         <div className="relative">
