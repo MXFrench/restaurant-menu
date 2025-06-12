@@ -1,0 +1,336 @@
+{
+  "menu": [
+    {
+        "id": 1,
+        "name": "Classic BLT Sandwich",
+        "description": "Crispy bacon, fresh lettuce, and juicy tomato slices on toasted sourdough bread.",
+        "price": 8.99,
+        "calories": 550,
+        "imgUrl": "https://images.unsplash.com/photo-1722041220514-f6a26e286f2e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "sandwiches"
+      },
+    {
+        "id": 2,
+        "name": "Grilled Cheese Sandwich",
+        "description": "Melted cheddar cheese between two slices of golden, buttered bread.",
+        "price": 6.99,
+        "calories": 400,
+        "imgUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "sandwiches"
+      },
+    {
+        "id": 3,
+        "name": "Turkey Club Sandwich",
+        "description": "Layers of turkey, bacon, lettuce, tomato, and mayo on toasted multigrain bread.",
+        "price": 9.49,
+        "calories": 700,
+        "imgUrl": "https://images.unsplash.com/photo-1567234669003-dce7a7a88821?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "sandwiches"
+      },
+    {
+        "id": 4,
+        "name": "Pulled Pork Sandwich",
+        "description": "Slow-cooked pulled pork with tangy barbecue sauce on a soft bun.",
+        "price": 10.99,
+        "calories": 800,
+        "imgUrl": "https://images.unsplash.com/photo-1709581529998-11b7b2e17f55?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "sandwiches"
+      },
+    {
+        "id": 5,
+        "name": "Veggie Delight Sandwich",
+        "description": "A medley of fresh vegetables and hummus on whole wheat bread.",
+        "price": 7.49,
+        "calories": 350,
+        "imgUrl": "https://images.unsplash.com/photo-1607037824335-603131b17d5f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "sandwiches"
+      },
+    {
+        "id": 6,
+        "name": "Chicken Caesar Wrap",
+        "description": "Grilled chicken, romaine lettuce, parmesan, and Caesar dressing wrapped in a tortilla.",
+        "price": 8.49,
+        "calories": 600,
+        "imgUrl": "https://cdn.pixabay.com/photo/2021/01/06/10/11/shawarma-5893935_1280.jpg",
+        "category": "sandwiches"
+      },
+    {
+        "id": 7,
+        "name": "Minestrone Soup",
+        "description": "A hearty Italian soup with vegetables, beans, and pasta in a tomato broth.",
+        "price": 5.99,
+        "calories": 250,
+        "imgUrl": "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "soups"
+      },
+    {
+        "id": 8,
+        "name": "Tomato Basil Soup",
+        "description": "Creamy tomato soup with fresh basil, perfect for dipping grilled cheese.",
+        "price": 6.49,
+        "calories": 300,
+        "imgUrl": "https://images.unsplash.com/photo-1730312382513-62e9454f4797?q=80&w=1401&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "soups"
+      },
+    {
+        "id": 9,
+        "name": "Chicken Tortilla Soup",
+        "description": "Spicy chicken soup with corn, black beans, and crispy tortilla strips.",
+        "price": 7.49,
+        "calories": 350,
+        "imgUrl": "https://images.unsplash.com/photo-1735233024815-7986206a18a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "soups"
+      },
+    {
+        "id": 10,
+        "name": "Lentil Soup",
+        "description": "A nutritious soup made with lentils, carrots, and celery in a savory broth.",
+        "price": 5.49,
+        "calories": 200,
+        "imgUrl": "https://cdn.pixabay.com/photo/2018/10/10/22/28/lentil-soup-3738547_1280.jpg",
+        "category": "soups"
+      },
+    {
+        "id": 11,
+        "name": "Butternut Squash Soup",
+        "description": "Smooth and creamy soup made with roasted butternut squash and a hint of nutmeg.",
+        "price": 6.99,
+        "calories": 220,
+        "imgUrl": "https://cdn.pixabay.com/photo/2020/11/09/13/22/soup-5726677_1280.jpg",
+        "category": "soups"
+      },
+    {
+        "id": 12,
+        "name": "French Onion Soup",
+        "description": "Caramelized onions in a rich broth, topped with melted cheese and toasted bread.",
+        "price": 7.99,
+            "calories": 350,
+            "imgUrl": "https://images.unsplash.com/photo-1549396563-92fab230895a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "soups"
+      },
+    {
+        "id": 13,
+        "name": "Caesar Salad",
+        "description": "Crisp romaine lettuce tossed with creamy Caesar dressing, croutons, and parmesan.",
+        "price": 7.99,
+        "calories": 450,
+        "imgUrl": "https://images.unsplash.com/photo-1605291535065-e1d52d2b264a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "salads"
+      },
+    {
+        "id": 14,
+        "name": "Greek Salad",
+        "description": "Romaine lettuce, cucumbers, tomatoes, olives, and feta cheese with Greek dressing.",
+        "price": 8.49,
+        "calories": 400,
+        "imgUrl": "https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?q=80&w=1279&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "salads"
+      },
+    {
+        "id": 15,
+        "name": "Caprese Salad",
+        "description": "Sliced tomatoes, fresh mozzarella, basil, and balsamic glaze.",
+        "price": 9.99,
+        "calories": 350,
+        "imgUrl": "https://images.unsplash.com/photo-1595587870672-c79b47875c6a?q=80&w=1346&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "salads"
+      },
+    {
+        "id": 16,
+        "name": "Cobb Salad",
+        "description": "Mixed greens topped with grilled chicken, bacon, avocado, eggs, and blue cheese.",
+        "price": 10.49,
+        "calories": 600,
+        "imgUrl": "https://images.unsplash.com/photo-1605291535557-4fc6bb3b4d00?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "salads"
+      },
+    {
+        "id": 17,
+        "name": "Spinach and Strawberry Salad",
+        "description": "Fresh spinach leaves with sliced strawberries, walnuts, and balsamic vinaigrette.",
+        "price": 8.99,
+        "calories": 350,
+        "imgUrl": "https://images.unsplash.com/photo-1727646210298-94150e7ee4a7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "salads"
+      },
+    {
+        "id": 18,
+        "name": "Asian Sesame Salad",
+        "description": "Mixed greens with mandarin oranges, almonds, and sesame dressing.",
+        "price": 9.49,
+        "calories": 400,
+        "imgUrl": "https://cdn.pixabay.com/photo/2022/06/07/20/58/salad-7249259_1280.jpg",
+        "category": "salads"
+      },
+    {
+        "id": 19,
+        "name": "Garlic Bread",
+        "description": "Warm, buttery bread infused with roasted garlic and parsley.",
+        "price": 3.99,
+        "calories": 200,
+        "imgUrl": "https://cdn.pixabay.com/photo/2022/08/02/07/30/garlic-bread-7359756_1280.jpg",
+        "category": "bread"
+      },
+    {
+        "id": 20,
+        "name": "Cheese Breadsticks",
+        "description": "Soft breadsticks topped with melted mozzarella and served with marinara sauce.",
+        "price": 5.99,
+        "calories": 300,
+        "imgUrl": "https://images.unsplash.com/photo-1734774924912-dcbb467f8599?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "bread"
+      },
+    {
+        "id": 21,
+        "name": "Focaccia Bread",
+        "description": "Italian flatbread seasoned with rosemary and sea salt.",
+        "price": 4.49,
+        "calories": 250,
+        "imgUrl": "https://images.unsplash.com/photo-1711805064484-a77096f599a6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "category": "bread"
+      },
+    {
+        "id": 22,
+        "name": "Ciabatta Rolls",
+        "description": "Crusty Italian rolls with a soft, airy interior.",
+        "price": 3.49,
+        "calories": 180,
+        "imgUrl": "https://cdn.pixabay.com/photo/2023/05/21/20/00/ciabatta-buns-8009313_1280.jpg",
+        "category": "bread"
+      },
+    {
+        "id": 23,
+        "name": "Baguette",
+        "description": "Long, narrow loaf of French bread with a crispy crust.",
+        "price": 2.99,
+        "calories": 150,
+        "imgUrl": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
+        "category": "bread"
+      },
+    {
+      "id": 24,
+      "name": "Classic Lemonade",
+      "description": "Freshly squeezed lemons mixed with a touch of sweetness, served chilled.",
+      "price": 3.99,
+      "calories": 150,
+      "imgUrl": "https://images.unsplash.com/photo-1507281549113-040fcfef650e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "drinks"
+    },
+    {
+      "id": 25,
+      "name": "Iced Coffee",
+      "description": "Brewed coffee served over ice, with your choice of milk or cream.",
+      "price": 4.49,
+      "calories": 100,
+      "imgUrl": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "drinks"
+    },
+    {
+      "id": 26,
+      "name": "Green Tea",
+      "description": "A refreshing cup of hot or iced green tea, light and soothing.",
+      "price": 2.99,
+      "calories": 0,
+      "imgUrl": "https://images.unsplash.com/photo-1606377695906-236fdfcef767?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "drinks"
+    },
+    {
+      "id": 27,
+      "name": "Smoothie",
+      "description": "A creamy blend of fresh fruits and yogurt, available in strawberry, mango, or mixed berry.",
+      "price": 5.99,
+      "calories": 250,
+      "imgUrl": "https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "drinks"
+    },
+    {
+      "id": 28,
+      "name": "Sparkling Water",
+      "description": "Refreshing and bubbly sparkling water, perfect for quenching your thirst.",
+      "price": 2.49,
+      "calories": 0,
+      "imgUrl": "https://cdn.pixabay.com/photo/2022/02/15/00/40/lemonade-7014122_1280.jpg",
+      "category": "drinks"
+    },
+    {
+      "id": 29,
+      "name": "Hot Chocolate",
+      "description": "Rich and creamy hot chocolate made with premium cocoa, topped with whipped cream.",
+      "price": 4.49,
+      "calories": 300,
+      "imgUrl": "https://cdn.pixabay.com/photo/2016/10/30/09/30/hot-chocolate-1782623_1280.jpg",
+      "category": "drinks"
+    },
+    {
+      "id": 30,
+      "name": "Iced Matcha Latte",
+      "description": "A cool and creamy iced matcha latte, made with premium matcha green tea.",
+      "price": 5.49,
+      "calories": 150,
+      "imgUrl": "https://cdn.pixabay.com/photo/2017/08/26/19/12/matcha-green-tea-2683990_1280.jpg",
+      "category": "drinks"
+    },
+    {
+      "id": 31,
+      "name": "Coca-Cola",
+      "description": "A refreshing classic cola beverage, served ice-cold.",
+      "price": 2.29,
+      "calories": 140,
+      "imgUrl": "https://cdn.pixabay.com/photo/2014/09/26/19/51/drink-462776_1280.jpg",
+      "category": "drinks"
+    },
+    {
+      "id": 32,
+      "name": "Grilled Steak",
+      "description": "A perfectly grilled, tender steak served with garlic mashed potatoes and sautéed vegetables.",
+      "price": 18.99,
+      "calories": 750,
+      "imgUrl": "https://cdn.pixabay.com/photo/2020/07/05/19/24/steak-dinner-5374303_1280.jpg",
+      "category": "dinner"
+    },
+    {
+      "id": 33,
+      "name": "Baked Salmon",
+      "description": "Fresh salmon fillet baked with a lemon dill sauce, served with roasted asparagus.",
+      "price": 17.49,
+      "calories": 600,
+      "imgUrl": "https://cdn.pixabay.com/photo/2014/11/05/22/19/salmon-518497_1280.jpg",
+      "category": "dinner"
+    },
+    {
+      "id": 34,
+      "name": "Chicken Alfredo",
+      "description": "Grilled chicken served over fettuccine pasta with a rich and creamy Alfredo sauce.",
+      "price": 14.99,
+      "calories": 800,
+      "imgUrl": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "dinner"
+    },
+    {
+      "id": 35,
+      "name": "Vegetarian Stir-Fry",
+      "description": "A colorful mix of seasonal vegetables stir-fried with tofu in a savory soy-ginger sauce, served with jasmine rice.",
+      "price": 12.99,
+      "calories": 450,
+      "imgUrl": "https://images.unsplash.com/photo-1593967858208-67ddb5b4c406?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "dinner"
+    },
+    {
+      "id": 36,
+      "name": "Beef Lasagna",
+      "description": "Layers of pasta, seasoned ground beef, marinara sauce, ricotta, and mozzarella, baked to perfection.",
+      "price": 15.49,
+      "calories": 850,
+      "imgUrl": "https://images.unsplash.com/photo-1713802611143-d14c927e2217?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "dinner"
+    }
+  ],
+  "categories": [
+    "sandwiches",
+    "soups",
+    "salads",
+    "bread",
+    "drinks",
+    "dinner"
+  ]
+}
