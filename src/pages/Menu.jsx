@@ -1,17 +1,23 @@
+import { useEffect, useState } from "react";
 import crissxcross from "../assets/crissxcross.png";
+import FilterBtns from "../components/FilterBtns";
 import Header from "../components/Header";
 import MenuFooter from "../components/MenuFooter";
 import MenuContent from "./MenuContent";
 
 const Menu = () => {
+  const [data, setData] = useState(null);
+  const [menuItems, setMenuItems] = useState([]);
+
+  useEffect(() => setMenuItems(data?.menu), [data]);
 
   return (
     <div className="h-screen bg-size-[12rem] grid grid-rows-[auto_1fr_auto]" style={{backgroundImage: `url(${crissxcross})`}}>
       <Header />
       <div className="overflow-y-auto">
-        <div className="py-8 px-4 md:px-8 mx-auto w-[min(100rem,_100%)]">
-          <div className="mb-6">Filter Buttons</div>
-          <MenuContent />
+        <div className="py-8 px-4 md:px-8 mx-auto w-[min(100rem,_100%)] space-y-6">
+          <FilterBtns data={data} setMenuItems={setMenuItems} />
+          <MenuContent menuItems={menuItems} setData={setData} />
         </div>
 
       </div>

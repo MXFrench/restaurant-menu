@@ -34,3 +34,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent-2/50;
 }
+
+.chips::-webkit-scrollbar {
+  @apply h-1;
+}

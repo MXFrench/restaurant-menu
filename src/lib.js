@@ -6,3 +6,7 @@ export function capitalize(inputStr) {
   const joinStr = capitalizeStr.join("-");
   return joinStr;
 }
+
+export function filterByCategory(menu, category) {
+  return menu.filter(item => item.category === category);
+}
