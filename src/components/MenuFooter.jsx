@@ -1,4 +1,3 @@
-import React from 'react'
 import ViewOrderBtn from './ViewOrderBtn'
 import CheckoutBtn from './CheckoutBtn'
 

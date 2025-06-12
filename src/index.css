@@ -11,6 +11,7 @@
   --color-fg: #FFFDF4;
 
   --shadow-main: 0 0 6px 1px rgba(215, 208, 171, .25);
+  --shadow-main-sm: 0 0 4px 1px rgba(215, 208, 171, .15);
 }
 
 body {
