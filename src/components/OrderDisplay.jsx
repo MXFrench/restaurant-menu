@@ -1,4 +1,4 @@
-import { capitalize } from '../lib';
+import { capitalize, countOrders } from '../lib';
 import { useOrder, useUpdateOrder } from '../OrderContext';
 import { useState } from 'react';
 import { AiOutlineCarryOut } from "react-icons/ai";
@@ -62,7 +62,7 @@ const OrderDisplay = () => {
       )}
 
       <div className="bg-accent-2 size-8 sm:size-10 sm:text-lg rounded-full flex items-center justify-center">
-        {orderItems.length}
+        {countOrders(orderItems)}
       </div>
     </div>
   )

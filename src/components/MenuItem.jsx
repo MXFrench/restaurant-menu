@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
+import { useUpdateOrder } from "../OrderContext";
+import { updateOrderData } from "../lib";
 
 const MenuItem = ({item}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const updateOrder = useUpdateOrder();
+
+  const addItem = () => {
+    updateOrder(prev => updateOrderData(prev, item));
+  }
 
   return (
     <div className="rounded-lg relative aspect-3/2 bg-cover border-2 border-accent-2 shadow-main p-2 overflow-hidden"
@@ -29,7 +36,7 @@ const MenuItem = ({item}) => {
         </div>
 
         <button className="absolute m-4 bg-accent-2/85 text-xl active:ring-2 active:ring-accent-1/65 text-accent-1 hover:bg-accent-2 transition cursor-pointer rounded p-2 bottom-0 right-0 flex items-center justify-center"
-          onClick={() => {}}
+          onClick={addItem}
         ><FaPlus /></button>
       </div>
 

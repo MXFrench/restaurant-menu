@@ -1,8 +1,10 @@
-import React from 'react'
+import { useOrder } from "../OrderContext";
 
 const Order = () => {
+  const order = useOrder();
+
   return (
-    <div>Order</div>
+    <div><pre>{JSON.stringify(order, null, 2)}</pre></div>
   )
 }
 
