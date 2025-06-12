@@ -16,8 +16,16 @@ export const OrderCard = ({ item }) => {
   }, [itemCount]);
 
   return (
-    <div className="shadow-main rounded-lg border-2 border-accent-2 bg-base p-1">
-      <div className="w-full h-full rounded-sm border-2 border-accent-1 p-4 flex justify-end">
+    <div className="shadow-main rounded-lg border-2 border-accent-2 bg-base p-1 relative overflow-hidden">
+      <div className="absolute h-full w-[calc(100%_-_20.8rem)] top-0 left-0">
+        <img className="h-full w-full object-cover"
+          src={item.imgUrl}
+          alt="food-image"
+        />
+
+      </div>
+      <div className="w-full h-full rounded-sm border-2 border-accent-1 p-4 flex justify-end relative">
+        
         <div className="w-72">
           <h3 className="font-special leading-none text-accent-1 font-bold text-2xl">{item.name}</h3>
           <div className="flex gap-4 items-center mt-2">

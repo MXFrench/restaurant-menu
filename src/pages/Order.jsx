@@ -15,7 +15,7 @@ const Order = () => {
 
   return (
     <div className="h-screen bg-size-[12rem] grid grid-rows-[1fr_auto]" style={{backgroundImage: `url(${crissxcross})`}}>
-      <div className="flex flex-col gap-8 w-[min(100%,_80rem)] py-8 px-4 mx-auto overflow-y-auto">
+      <div className="flex flex-col gap-8 w-[min(100%,_100rem)] py-8 px-4 mx-auto overflow-y-auto">
         <button className="leading-none flex items-center gap-2 cursor-pointer text-accent-2 hover:text-accent-1 transition"
           onClick={() => navigate("/menu")}
         >
@@ -24,9 +24,9 @@ const Order = () => {
         </button>
 
         <div className="flex gap-4 items-center *:leading-none">
-          <h1 className="text-4xl font-semibold">Order Type: </h1>
+          <h1 className="text-2xl sm:text-4xl font-semibold">Order Type: </h1>
           <div className="relative">
-            <button className="text-2xl py-2 px-4 border-2 border-accent-2 text-accent-1 rounded-full cursor-pointer"
+            <button className="md:text-2xl py-2 px-4 border-2 border-accent-2 text-accent-1 rounded-full cursor-pointer"
               onClick={() => setIsOpen(prev => !prev)}
             >{orderType ? capitalize(orderType) : <span className="opacity-25 hover:opacity-50 transition">Order Type</span>}</button>
             {isOpen && <OrderTypeMenu setIsOpen={setIsOpen} />}
@@ -41,13 +41,15 @@ const Order = () => {
           </div>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {orderItems.map(item => <OrderCard key={item.id} item={item} />)}
         </div>
       </div>
 
-      <footer className="p-4 border-t-2 border-accent-1 shadow-main bg-base grid">
-        <CheckoutBtn />
+      <footer className="p-4 border-t-2 border-accent-1 shadow-main bg-base">
+        <div className="grid grid-cols-[min(100%,_20rem)] justify-center">
+          <CheckoutBtn />
+        </div>
       </footer>
     </div>
   )
