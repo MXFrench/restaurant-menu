@@ -49,16 +49,21 @@ export function updateOrderData(prev, item) {
   }
 }
 
+export function updateCountOrder(orderItems, itemId, newCount) {
+  return orderItems?.map(i => i.id === itemId ? ({...i, count: newCount}) : i)
+}
+
 export function countOrders(orderItems) {
   let count = 0;
   orderItems.forEach(item => {
     count = count + item.count;
   });
-  return count;
+  const rounded = Math.round(count * 100) / 100;
+  return rounded;
 }
 
 export function sumPrice(orderItems) {
   let price = 0;
-  orderItems.forEach(item => price = price + item.price);
+  orderItems.forEach(item => price = price + (item.price * item.count));
   return price;
 }

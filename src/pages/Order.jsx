@@ -34,7 +34,7 @@ const Order = () => {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {orderItems.map(item => <OrderCard item={item} />)}
+          {orderItems.map(item => <OrderCard key={item.id} item={item} />)}
         </div>
       </div>
 
