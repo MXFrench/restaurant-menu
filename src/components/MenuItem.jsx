@@ -2,13 +2,20 @@ import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { useUpdateOrder } from "../OrderContext";
 import { updateOrderData } from "../lib";
+import { FaCheck } from "react-icons/fa";
 
 const MenuItem = ({item}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [alerting, setAlerting] = useState(false);
   const updateOrder = useUpdateOrder();
 
   const addItem = () => {
+    if (alerting) return;
+    setAlerting(true);
     updateOrder(prev => updateOrderData(prev, item));
+    setTimeout(() => {
+      setAlerting(false);
+    }, 1000);
   }
 
   return (
@@ -37,9 +44,8 @@ const MenuItem = ({item}) => {
 
         <button className="absolute m-4 bg-accent-2/85 text-xl active:ring-2 active:ring-accent-1/65 text-accent-1 hover:bg-accent-2 transition cursor-pointer rounded p-2 bottom-0 right-0 flex items-center justify-center"
           onClick={addItem}
-        ><FaPlus /></button>
+        >{alerting ? <FaCheck className="animate-ping" /> : <FaPlus />}</button>
       </div>
-
     </div>
   )
 }
