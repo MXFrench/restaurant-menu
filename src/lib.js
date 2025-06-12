@@ -56,3 +56,9 @@ export function countOrders(orderItems) {
   });
   return count;
 }
+
+export function sumPrice(orderItems) {
+  let price = 0;
+  orderItems.forEach(item => price = price + item.price);
+  return price;
+}

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import MenuItem from "../components/MenuItem";
+import MenuItem from "./MenuItem";
 
 const MenuContent = ({ menuItems, setData }) => {
   const apiUrl = import.meta.env.VITE_API_URL;

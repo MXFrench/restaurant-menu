@@ -3,7 +3,7 @@ import crissxcross from "../assets/crissxcross.png";
 import FilterBtns from "../components/FilterBtns";
 import Header from "../components/Header";
 import MenuFooter from "../components/MenuFooter";
-import MenuContent from "./MenuContent";
+import MenuContent from "../components/MenuContent";
 import SearchBar from "../components/SearchBar";
 
 const Menu = () => {
