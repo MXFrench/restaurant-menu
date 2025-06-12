@@ -10,7 +10,7 @@
   --color-accent-2: #716D5A;
   --color-fg: #FFFDF4;
 
-  --shadow-main: 0 0 4px 1px rgba(215, 208, 171, .25);
+  --shadow-main: 0 0 6px 1px rgba(215, 208, 171, .25);
 }
 
 body {

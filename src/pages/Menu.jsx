@@ -7,9 +7,12 @@ const Menu = () => {
   const order = useOrder();
 
   return (
-    <div className="min-h-screen bg-size-[12rem]" style={{backgroundImage: `url(${crissxcross})`}}>
+    <div className="h-screen bg-size-[12rem] grid grid-rows-[auto_1fr_auto]" style={{backgroundImage: `url(${crissxcross})`}}>
       <Header />
-      {/* Fetch data and display here */}
+      <div className="overflow-y-auto">
+        {/* Fetch data and display here */}
+        DATA
+      </div>
       <MenuFooter />
     </div>
   )
