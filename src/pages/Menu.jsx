@@ -1,11 +1,17 @@
-import React from 'react'
 import { useOrder } from "../OrderContext";
+import crissxcross from "../assets/crissxcross.png";
+import Header from "../components/Header";
+import MenuFooter from "../components/MenuFooter";
 
 const Menu = () => {
   const order = useOrder();
 
   return (
-    <div>Menu: {order.orderType}</div>
+    <div className="min-h-screen bg-size-[12rem]" style={{backgroundImage: `url(${crissxcross})`}}>
+      <Header />
+      {/* Fetch data and display here */}
+      <MenuFooter />
+    </div>
   )
 }
 
