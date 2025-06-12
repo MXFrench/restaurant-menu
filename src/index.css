@@ -17,3 +17,19 @@ body {
   background-color: var(--color-base);
   color: var(--color-fg);
 }
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-accent-2/15;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-2/25 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-2/50;
+}

@@ -8,7 +8,13 @@ const Menu = () => {
   return (
     <div className="h-screen bg-size-[12rem] grid grid-rows-[auto_1fr_auto]" style={{backgroundImage: `url(${crissxcross})`}}>
       <Header />
-      <MenuContent />
+      <div className="overflow-y-auto">
+        <div className="py-8 px-4 md:px-8 mx-auto w-[min(100rem,_100%)]">
+          <div className="mb-6">Filter Buttons</div>
+          <MenuContent />
+        </div>
+
+      </div>
       <MenuFooter />
     </div>
   )
