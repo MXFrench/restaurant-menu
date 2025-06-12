@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router";
 import { capitalize } from "../lib";
 import { FaArrowRight } from "react-icons/fa";
+import { useUpdateOrder } from "../OrderContext";
 
 
 const OrderButton = ({ orderType }) => {
   const navigate = useNavigate();
+  const updateOrder = useUpdateOrder();
 
   const openMenu = () => {
-    // Set context hook for order type to orderType
+    updateOrder(prev => ({...prev, orderType: orderType}));
     navigate("/menu");
   }
 
