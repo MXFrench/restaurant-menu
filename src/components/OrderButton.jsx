@@ -14,14 +14,14 @@ const OrderButton = ({ orderType }) => {
   }
 
   return (
-    <div className="group cursor-pointer bg-base border border-accent-2 shadow-main rounded-lg w-60 px-8 py-6 flex gap-8 items-center"
+    <div className="order-button group cursor-pointer bg-base border border-accent-2 shadow-main rounded-lg w-40 sm:w-60 px-4 py-3 pb-4 sm:px-8 sm:py-6 flex gap-8 items-center"
       onClick={openMenu}
     >
       <div className="grid gap-4">
-        <p className="font-special text-xl text-accent-2 leading-none">Order</p>
-        <p className="text-3xl leading-none">{capitalize(orderType)}</p>
+        <p className="font-special sm:text-xl text-accent-2 leading-none">Order</p>
+        <p className="text-xl sm:text-3xl leading-none">{capitalize(orderType)}</p>
       </div>
-      <FaArrowRight className="text-4xl text-accent-1 translate-y-3 opacity-0 transition group-hover:opacity-100 group-hover:translate-y-0" />
+      <FaArrowRight className="text-2xl sm:text-4xl text-accent-1 translate-y-3 opacity-0 transition group-hover:opacity-100 group-hover:translate-y-0" />
     </div>
   )
 }

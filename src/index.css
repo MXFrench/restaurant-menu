@@ -12,6 +12,8 @@
 
   --shadow-main: 0 0 6px 1px rgba(215, 208, 171, .25);
   --shadow-main-sm: 0 0 4px 1px rgba(215, 208, 171, .15);
+
+  --breakpoint-xs: 25rem;
 }
 
 body {
@@ -45,4 +47,14 @@ body {
 
 .form-input {
   @apply p-2 leading-none outline-0 placeholder:text-accent-2 border-2 border-accent-2 rounded-lg focus-visible:border-accent-1 transition w-full;
+}
+
+@media (hover: none) {
+  .order-button {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  .order-button svg {
+    display: none;
+  }
 }

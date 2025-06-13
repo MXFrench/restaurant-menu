@@ -9,7 +9,7 @@ const OrderDisplay = () => {
 
   return (
     <div className="rounded-lg border sm:border-2 border-accent-2 p-2 sm:p-3 flex gap-3 sm:gap-4 items-center relative">
-      <div className="space-y-2 cursor-pointer"
+      <div className="min-[25rem]:space-y-2 cursor-pointer"
         onClick={() => setIsOpen(prev => !prev)}
       >
         <p className="leading-none text-xs text-accent-1">My Order</p>

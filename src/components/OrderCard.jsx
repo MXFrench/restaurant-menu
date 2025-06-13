@@ -22,7 +22,7 @@ export const OrderCard = ({ item }) => {
 
   return (
     <div className="shadow-main rounded-lg border-2 border-accent-2 bg-base p-1 relative overflow-hidden">
-      <div className="absolute h-full w-[calc(100%_-_20.8rem)] top-0 left-0">
+      <div className="absolute h-full w-[calc(100%_-_20.8rem)] max-xs:w-full max-xs:opacity-5 top-0 left-0">
         <img className="h-full w-full object-cover"
           src={item.imgUrl}
           alt="food-image"
@@ -31,7 +31,7 @@ export const OrderCard = ({ item }) => {
       </div>
       <div className="w-full h-full rounded-sm border-2 border-accent-1 p-4 flex justify-end relative">
         
-        <div className="w-72">
+        <div className="w-72 max-xs:w-full">
           <h3 className="font-special leading-none text-accent-1 font-bold text-2xl">{item.name}</h3>
           <div className="flex gap-4 items-center mt-2">
             <p className="leading-none py-2 px-3 rounded bg-accent-1/15">${formatPriceString(item.price)}</p>

@@ -55,7 +55,7 @@ const Order = () => {
         </div>
       </div>
 
-      <footer className="p-4 border-t-2 border-accent-1 shadow-main bg-base">
+      <footer className="p-2 xs:p-4 border-t-2 border-accent-1 shadow-main bg-base">
         <div className="grid grid-cols-[min(100%,_20rem)] justify-center">
           <CheckoutBtn />
         </div>

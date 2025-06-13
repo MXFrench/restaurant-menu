@@ -6,8 +6,8 @@ import { CiSearch } from "react-icons/ci";
 const Header = ({ searchMode, setSearchMode }) => {
   const navigate = useNavigate();
   return (
-    <header className="bg-base border-b-2 border-b-accent-1 shadow-main p-4 flex justify-between items-center">
-      <img className="h-10 lg:h-12 cursor-pointer"
+    <header className="bg-base border-b-2 border-b-accent-1 shadow-main p-2 xs:p-4 flex justify-between items-center">
+      <img className="h-10 lg:h-12 max-xs:h-8 cursor-pointer"
       src={menuLogo} alt="menu-logo"
       onClick={() => navigate("/")} />
 

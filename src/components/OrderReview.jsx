@@ -5,7 +5,7 @@ const OrderReview = () => {
   const { orderItems } = useOrder();
   
   return (
-    <table className="grid gap-2 overflow-x-auto max-[25rem]:text-sm">
+    <table className="grid gap-2 overflow-x-auto max-xs:text-sm">
       <thead>
         <tr className="grid grid-cols-[1fr_4rem_1rem_4rem] gap-2 *:font-medium justify-items-center">
           <th className="justify-self-start">Item</th>

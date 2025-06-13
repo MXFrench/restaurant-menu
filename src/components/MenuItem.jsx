@@ -19,7 +19,7 @@ const MenuItem = ({item}) => {
   }
 
   return (
-    <div className="rounded-lg relative aspect-3/2 max-[25rem]:aspect-4/3 bg-cover border-2 border-accent-2 shadow-main p-2 overflow-hidden"
+    <div className="rounded-lg relative aspect-3/2 max-xs:aspect-4/3 bg-cover border-2 border-accent-2 shadow-main p-2 overflow-hidden"
       style={{backgroundImage: `url("${item.imgUrl}")`}}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
@@ -29,9 +29,9 @@ const MenuItem = ({item}) => {
 
       <div className="rounded-sm border-2 border-accent-1 w-full h-full relative z-10 px-4">
         <div className="space-y-2 absolute py-4 bottom-0 transition">
-          <h3 className="font-special font-bold text-2xl max-[25rem]:text-xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-2xl text-accent-1 leading-none">{item.name}</h3>
+          <h3 className="font-special font-bold text-2xl max-xs:text-xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-2xl text-accent-1 leading-none">{item.name}</h3>
 
-          <div className="flex gap-4 items-center max-[25rem]:text-sm max-[25rem]:gap-2">
+          <div className="flex gap-4 items-center max-xs:text-sm max-xs:gap-2">
             <span className="px-2 py-1.5 bg-accent-1/15 leading-none rounded">${formatPriceString(item.price)}</span>
             <span>{item.calories} Cal.</span>
             <button className="text-fg/50 hover:text-fg/75 cursor-pointer transition"
@@ -39,7 +39,7 @@ const MenuItem = ({item}) => {
             >{isOpen ? "Read less" : "Read more..."}</button>
           </div>
 
-          <p className={`opacity-0 transition-all max-[25rem]:text-sm ${isOpen && "opacity-100 h-28 max-[25rem]:h-22"} ${!isOpen && "h-0"}`}>{item.description}</p>
+          <p className={`opacity-0 transition-all max-xs:text-sm ${isOpen && "opacity-100 h-28 max-xs:h-22"} ${!isOpen && "h-0"}`}>{item.description}</p>
         </div>
 
         <button className="absolute m-4 bg-accent-2/85 text-xl active:ring-2 active:ring-accent-1/65 text-accent-1 hover:bg-accent-2 transition cursor-pointer rounded p-2 bottom-0 right-0 flex items-center justify-center"
