@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router";
+import crissxcross from "../assets/crissxcross.png";
 
 const Confirm = () => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -11,11 +14,13 @@ const Confirm = () => {
   }, [])
 
   return (
-    <div className="min-h-screen grid place-content-center gap-12 justify-items-center">
+    <div className="min-h-screen grid place-content-center gap-12 justify-items-center bg-size-[12rem]"
+      style={{backgroundImage: `url(${crissxcross})`}}>
       <img
         src={logo}
-        className="h-12"
+        className="h-12 cursor-pointer"
         alt="logo-img"
+        onClick={() => navigate("/")}
       />
 
       <div className="max-w-60 min-h-20">
