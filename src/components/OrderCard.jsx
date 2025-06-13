@@ -2,12 +2,17 @@ import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import { useUpdateOrder, useOrder } from "../OrderContext";
-import { updateCountOrder } from "../lib";
+import { formatPriceString, isNumber, updateCountOrder } from "../lib";
 
 export const OrderCard = ({ item }) => {
   const { orderItems } = useOrder();
   const updateOrder = useUpdateOrder();
   const [itemCount, setItemCount] = useState(item.count);
+
+  const removeItem = () => {
+    const removedArray = orderItems.filter(curItem => curItem.id !== item.id);
+    updateOrder(prev => ({...prev, orderItems: removedArray}));
+  }
 
   useEffect(() => {
     if (!orderItems || orderItems?.length === 0) return;
@@ -29,26 +34,39 @@ export const OrderCard = ({ item }) => {
         <div className="w-72">
           <h3 className="font-special leading-none text-accent-1 font-bold text-2xl">{item.name}</h3>
           <div className="flex gap-4 items-center mt-2">
-            <p className="leading-none py-2 px-3 rounded bg-accent-1/15">${item.price}</p>
+            <p className="leading-none py-2 px-3 rounded bg-accent-1/15">${formatPriceString(item.price)}</p>
             <p className="">{item.calories} Cal.</p>
           </div>
 
           <div className="mt-8 flex gap-4">
             <div className="grid grid-cols-3 border-2 rounded overflow-hidden border-accent-2">
               <button className="w-10 h-8 flex items-center justify-center bg-accent-2 cursor-pointer"
-                onClick={() => setItemCount(prev => prev - 1)}
+                onClick={() => {
+                  if (itemCount == 0) return;
+                  setItemCount(prev => parseInt(prev) - 1);
+                }}
               ><FaMinus /></button>
               <input type="text"
                 className="w-10 h-8 flex items-center justify-center text-center outline-0 focus-visible:bg-accent-2/15"
                 value={itemCount}
-                onChange={(e) => setItemCount(e.target.value)}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (!isNumber(val)) return;
+                  if (val === "") {
+                    setItemCount("0");
+                    return;
+                  }
+                  setItemCount(parseInt(val));
+                }}
               />
               <button className="w-10 h-8 flex items-center justify-center bg-accent-2 cursor-pointer"
-                onClick={() => setItemCount(prev => prev + 1)}
+                onClick={() => setItemCount(prev => parseInt(prev) + 1)}
               ><FaPlus /></button>
             </div>
 
-            <button>Remove</button>
+            <button className="text-accent-2 hover:text-accent-1 transition cursor-pointer"
+              onClick={() => removeItem()}
+            >Remove</button>
           </div>
 
         </div>

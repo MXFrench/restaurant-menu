@@ -7,6 +7,27 @@ export function capitalize(inputStr) {
   return joinStr;
 }
 
+export function formatPriceString(price) {
+  if (price == 0) return "0.00";
+  const priceString = JSON.stringify(price);
+  const priceSplit = priceString?.split(".");
+  const padSecondHalf = priceSplit[1]?.padEnd(2, "0");
+  const shortenSecondHalf = padSecondHalf?.slice(0, 2);
+  const arrayString = [priceSplit[0], shortenSecondHalf];
+  const joinString = arrayString?.join(".");
+  return joinString;
+}
+
+export function isNumber(str) {
+  const splitStr = str.split("");
+  const numbers = "1234567890";
+  for (let i = 0; i < splitStr.length; i++) {
+    const char = splitStr[i];
+    if (!numbers.includes(char)) return false;
+  }
+  return true;
+}
+
 export function filterByCategory(menu, category) {
   return menu.filter(item => item.category === category);
 }
@@ -56,7 +77,7 @@ export function updateCountOrder(orderItems, itemId, newCount) {
 export function countOrders(orderItems) {
   let count = 0;
   orderItems.forEach(item => {
-    count = count + item.count;
+    count = parseInt(count) + parseInt(item.count);
   });
   const rounded = Math.round(count * 100) / 100;
   return rounded;

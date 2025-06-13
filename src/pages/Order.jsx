@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useOrder } from "../OrderContext";
 import crissxcross from "../assets/crissxcross.png";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import { capitalize, countOrders, sumPrice } from "../lib";
+import { capitalize, countOrders, formatPriceString, sumPrice } from "../lib";
 import { OrderCard } from "../components/OrderCard";
 import CheckoutBtn from "../components/CheckoutBtn";
 import OrderTypeMenu from "../components/OrderTypeMenu";
@@ -37,9 +37,18 @@ const Order = () => {
           <div className="absolute h-[1px] w-full bg-accent-1 top-[50%]"></div>
           <div className="relative flex justify-end items-center gap-8 px-4 font-thin md:text-xl">
             <p className="bg-base px-2">{countOrders(orderItems)} Items</p>
-            <p className="bg-base px-2">Total: ${sumPrice(orderItems)}</p>
+            <p className="bg-base px-2">Total: ${formatPriceString(sumPrice(orderItems))}</p>
           </div>
         </div>
+
+        {orderItems.length === 0 && (
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-center text-2xl italic text-accent-1">Your order tab is empty.</p>
+            <button className="border border-accent-2 text-accent-1 leading-none py-2 px-4 rounded-full cursor-pointer hover:bg-accent-2/15 transition"
+              onClick={() => navigate("/menu")}
+            >Browse menu</button>
+          </div>
+        )}
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {orderItems.map(item => <OrderCard key={item.id} item={item} />)}

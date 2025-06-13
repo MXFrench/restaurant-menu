@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { useUpdateOrder } from "../OrderContext";
-import { updateOrderData } from "../lib";
+import { formatPriceString, updateOrderData } from "../lib";
 import { FaCheck } from "react-icons/fa";
 
 const MenuItem = ({item}) => {
@@ -32,7 +32,7 @@ const MenuItem = ({item}) => {
           <h3 className="font-special font-bold text-2xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-2xl text-accent-1 leading-none">{item.name}</h3>
 
           <div className="flex gap-4 items-center">
-            <span className="px-2 py-1.5 bg-accent-1/15 leading-none rounded">${item.price}</span>
+            <span className="px-2 py-1.5 bg-accent-1/15 leading-none rounded">${formatPriceString(item.price)}</span>
             <span>{item.calories} Cal.</span>
             <button className="text-fg/50 hover:text-fg/75 cursor-pointer transition"
               onClick={() => setIsOpen(prev => !prev)}
