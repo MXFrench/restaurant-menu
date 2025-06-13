@@ -7,7 +7,7 @@ const Header = ({ searchMode, setSearchMode }) => {
   const navigate = useNavigate();
   return (
     <header className="bg-base border-b-2 border-b-accent-1 shadow-main p-4 flex justify-between items-center">
-      <img className="h-8 lg:h-10 cursor-pointer"
+      <img className="h-10 lg:h-12 cursor-pointer"
       src={menuLogo} alt="menu-logo"
       onClick={() => navigate("/")} />
 
