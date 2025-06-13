@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import OrderReview from './OrderReview'
 import { useOrder } from '../OrderContext';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import { useNavigate } from 'react-router';
 
 const CheckoutForm = () => {
+  const navigate = useNavigate();
   const { orderType } = useOrder();
   const [showReview, setShowReview] = useState(true);
+  const [showError, setShowError] = useState(false);
   const [formData, setFormData] = useState({
     fName: "",
     lName: "",
@@ -27,13 +30,38 @@ const CheckoutForm = () => {
     } : null,
   });
 
+  useEffect(() => setShowError(false), [formData]);
+
+  const checkInputs = () => {
+    for (const key in formData) {
+      const currentVal = formData[key];
+      if (!currentVal && key !== "deliveryAddress") return false;
+      if (typeof currentVal === "object") {
+        for (const k in currentVal) {
+          const curVal = currentVal[k];
+          if (!curVal && k !== "isBilling") return false;
+        }
+      }
+    }
+    return true;
+  }
+
   const submitForm = (e) => {
     e.preventDefault();
+    // In theory, you can then send this form data with the order items and everything to the back end
     console.log(formData);
+
+    if (checkInputs()) {
+      navigate("/confirm");
+    } else {
+      setShowError(true);
+    }
   }
 
   return (
     <form className="grid gap-6" onSubmit={submitForm}>
+      {showError && <p className="italic text-red-400/50">Please fill in all fields.</p>}
+
       <div className="flex">
         <label className="flex-1/2 grid gap-2">
           <span className="form-label">First Name</span>
@@ -169,7 +197,6 @@ const CheckoutForm = () => {
       </div>
 
       <button type="submit" className="bg-accent-2/80 hover:bg-accent-2 text-accent-1 hover:text-fg py-2 px-4 rounded-lg hover:shadow-main-sm transition cursor-pointer">Submit Order</button>
-
     </form>
   )
 }

@@ -4,6 +4,7 @@ import OrderProvider from "./OrderContext";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order";
 import Checkout from "./pages/Checkout";
+import Confirm from "./pages/Confirm";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="menu" element={<Menu />} />
         <Route path="order" element={<Order />} />
         <Route path="checkout" element={<Checkout />} />
+        <Route path="confirm" element={<Confirm />} />
       </Routes>
     </OrderProvider>
   )
